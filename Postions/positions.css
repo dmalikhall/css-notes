@@ -1,0 +1,127 @@
+/* CSS Postions */
+/* resouce
+    https://www.youtube.com/watch?v=jx5jmI0UlXU
+
+*/
+    /* There are 5 Positions */
+
+ /* Static */
+    /* Static position is the default position */
+
+/* Position: Relative */
+    /* Looks the same as Static position but allows us to move the left, right, top, and bottom of an element */
+
+    /* Relative allows us to change position of an element relative to where it would normally be in the static postion */
+
+    /* Usually we dont use relative for left, right, top, and bottom  */
+
+    /* Its main use is for a parent element, in order to use position: absolute on a child element */
+
+        .child-one {
+            position: relative;
+            /* nothing is happening because its default is still static */
+            top: 10px;
+            /* the element moves 10px to the bottom relative from where it would be in its default... it also overlaps any element near it as if its now its own thing */
+        };
+
+        /* main use for relative looks like this */
+
+     /* the parent is relative, which allows us to be in more control of the child element, only moving within the parent element */
+
+        .parent {
+            width: 500px;
+            height: 200vh;
+            background-color: aqua;
+            padding: 15px;
+            position: relative;        
+        }
+        
+        .child-one {
+            background-color: lightgreen;
+            width: 400px;
+            padding: 20px;
+            position: absolute;
+            top: 0;       
+        }
+
+
+/* Postion: Absolute */
+        /* A good use for top, right, left, and bottom */
+
+        /* allows us to move a child element without affecting others around it */
+
+        /* common use when parent element is relative */
+
+        /* can also use with all other positions */
+
+        .parent {
+            width: 500px;
+            height: 200vh;
+            background-color: aqua;
+            padding: 15px;
+            position: relative;
+        
+        }
+        
+        .child-one {
+            background-color: lightgreen;
+            width: 400px;
+            padding: 20px;
+            position: absolute;
+            left: 10px;
+        }
+
+/* Position: Fixed */
+        /* moves with the page as you scroll */
+        /* positions itself based on the entire html page not the parent element */
+
+        .child-one {
+            background-color: lightgreen;
+            width: 400px;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+        }
+
+/* Position: Sticky */
+        /* A combination of relative position and fixed position */
+
+        .child-one {
+            background-color: lightgreen;
+            width: 400px;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            /* at first it looks like relative psotion but as soon as the element hits the top of the page, it will become fixed postion */
+        }
+
+.parent {
+    width: 500px;
+    height: 200vh;
+    background-color: aqua;
+    padding: 15px;
+    position: relative;
+
+}
+
+.child-one {
+    background-color: lightgreen;
+    width: 400px;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.child-two {
+    background-color: lightcoral;
+    width: 400px;
+    padding: 20px
+
+}
+
+.child-three {
+    background-color: lightpink;
+    width: 400px;
+    padding: 20px
+
+}

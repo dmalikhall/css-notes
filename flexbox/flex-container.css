@@ -1,0 +1,79 @@
+/* RESOURCE */
+/* https://www.youtube.com/watch?v=fYq5PXgSsbE */
+
+body{ 
+    padding: 0;
+    margin: 0;
+}
+
+/* to use flex box we do
+    display: flex; on the container
+*/
+
+/* in the container of the flexbox we can
+    - lay out items across rows and columns
+    - align items inside the container
+    - decide how each items grows and shrinks
+    - lay out space between items and position items in container
+*/
+
+/* flexbox placement has to do with the main-axis and the cross-axis */
+    /* the main axis will go the same direction as our layout, where its row or column */
+
+
+/* STYLE ELEMENTS ON MAIN AXIS */
+    /* justify-content: */
+        /* : flex-start; will align items at the start of the main-axis */
+        /* : center; will align items will be at the center of the container*/
+        /* : space-between will align space evenly between items*/
+        /* : space-around will put space evenly around items */
+
+/*  STYLE ON CROSS AXIS */
+    /* align-items:  */
+    /* the default is : stretch; which means the items will fill up as much space at the can on the cross-axis */
+    /* : flex-start; allows all items to align at the very top of the cross axis */
+    /* : center; centers items on the cross axis */
+    /* : flex-end */
+
+/* STYLE FOR MULTI-LINE FLEXBOX CONTAINERS */
+    /* align-content */
+    /* : flex-start */
+    /* :center */
+    /* : flex-end */
+    /* : can use same properties as justify-content */
+    /* to see in use add height:700px  */
+
+/* EXTRA */
+    /* flex-wrap */
+    /* flex-direction */
+
+
+
+.flexbox-container {    
+    display: flex;
+    justify-content: space-around;  
+    align-items: stretch;
+    align-content: center;
+}
+
+.flexbox-item {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+
+.item-1 {
+    min-height: 100px;
+
+}
+
+.item-2 {
+    min-height: 200px;
+
+}
+
+.item-3 {
+    min-height: 300px;
+
+}

@@ -1,0 +1,381 @@
+/* Box Shadow */
+/* Resources */
+/* https://www.youtube.com/watch?v=-JNRQ5HjNeI */
+
+
+    /* Needs at least two values to work and the have to be numbers */
+    /* They can be in px, em, or rem */
+    /* They cannot be in percentages */
+
+    /* the first value is the veritical side*/
+        /* body {
+            background-color: gold;
+            position: relative;
+        }
+        
+        .box {
+            position: absolute;
+            top: 40vh;
+            left: 40%;
+            background-color: white;
+            padding: 2em;
+            box-shadow:  20px 0px; ;
+        } */
+    
+    /* The second value is the horizontal side */
+    
+        /* .box {
+            position: absolute;
+            top: 40vh;
+            left: 40%;
+            background-color: white;
+            padding: 2em;
+            box-shadow:  0px 20px; ;
+        } */
+
+    /* if we want to make them go up or to the left, make the numbers negative */
+        /* .box {
+            position: absolute;
+            top: 40vh;
+            left: 40%;
+            background-color: white;
+            padding: 2em;
+            box-shadow:  -20px -20px; ;
+        } */
+
+
+/* Adding a Third Number */
+    /* The third number/value is the blur */
+    /* blurs cannot be a negative number */
+        /* .box {
+            position: absolute;
+            top: 40vh;
+            left: 40%;
+            background-color: white;
+            padding: 2em;
+            box-shadow:  20px 20px 20px ;
+        } */
+
+/* Adding a Fourth Number */
+        /* The fourth number/vaule is the spread */
+        /* it chooses when to start the blur, also pushes it further out */
+        /* it can be a negative number */
+        /* can be very useful */
+
+            /* .box {
+                position: absolute;
+                top: 40vh;
+                left: 40%;
+                background-color: white;
+                padding: 2em;
+                box-shadow:  0px 0px 20px 30px;
+            } */
+
+/* Adding Color to the Shadow */
+            /* the shadow color default matches the text color */
+            /* dont rely on the statement above, Safari browser turns the default to transparent */
+            /* to make sure our shadow color is correct use the currentcolor property, so its good in all browsers */
+                /* .box {
+                    position: absolute;
+                    top: 40vh;
+                    left: 40%;
+                    background-color: white;
+                    color: blue;
+                    padding: 2em;
+                    box-shadow:  0px 0px 20px 20px currentColor;
+                } */
+
+            /* if i want a different box shadow color seperate from the text color i just add the color i want, using the name or rgb */
+                /* .box {
+                    position: absolute;
+                    top: 40vh;
+                    left: 40%;
+                    background-color: white;
+                    color: blue;
+                    padding: 2em;
+                    box-shadow:  0px 0px 20px 20px green;
+                } */
+
+/* inset property */
+                /* at the beginning of the box-shadow property we can add inset */
+
+                /* it puts the shadow on the inside instead of the outside */
+                    /* .box {
+                        position: absolute;
+                        top: 40vh;
+                        left: 40%;
+                        background-color: white;
+                        color: blue;
+                        padding: 2em;
+                        box-shadow: inset 0px 0px 20px 0px green;
+                    } */
+
+/* Multiple Shadows */
+                    /* with multiple shadows they stack on top of each other */
+
+                    /* the first shadow will be on top, and the last shadow will be on the bottom */
+
+                        /* .box {
+                            position: absolute;
+                            top: 40vh;
+                            left: 40%;
+                            background-color: white;
+                            color: blue;
+                            padding: 2em;
+                            box-shadow: 100px 100px 100px black, 100px -100px 100px red, -100px -100px 100px green, -100px 100px 100px purple;
+                        } */
+
+                        /* To Make it look cleaner do this */
+                /* .box {
+                    position: absolute;
+                    top: 40vh;
+                    left: 40%;
+                    background-color: white;
+                    color: blue;
+                    padding: 2em;
+                    box-shadow: 100px 100px 100px black, 
+                                100px -100px 100px red, 
+                                -100px -100px 100px green, 
+                                -100px 100px 100px purple;
+                } */
+
+/* body {
+    background-color: gold;
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    top: 40vh;
+    left: 40%;
+    background-color: white;
+    color: blue;
+    padding: 2em;
+    box-shadow: 100px 100px 100px black, 
+                100px -100px 100px red, 
+                -100px -100px 100px green, 
+                -100px 100px 100px purple;
+} */
+
+/* Making Box Shadows Look Good */
+/* Resources */
+/* https://www.youtube.com/watch?v=Yon4l3MUBGY */
+/* https://codepen.io/kevinpowell/pen/qoMeZX */
+/* https://codepen.io/kevinpowell/pen/NYLQzW */
+/* https://codepen.io/kevinpowell/pen/JLagqZ */
+
+    /* important to use low opacity */
+    /* box shadows should always be subtle */
+
+
+/* * {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/halftone-yellow.png');
+    font-size: 2rem;
+    text-align: center;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+h1 { margin: 0; }
+
+.box {
+    background: white;
+    padding: 2em;
+    position: relative;
+    width: 70%;
+    box-shadow: 0 5px 25px 0 
+              rgba(0,0,0, .25);
+
+} */
+
+
+/* Second Example */
+/* https://codepen.io/kevinpowell/pen/NYLQzW */
+
+/* Using shadows for depth */
+    /* to make a box look higher like its hovering higher off the background, increase the blur */
+    /* same rule applies for inset */
+
+    
+        /* * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/halftone-yellow.png');
+            font-family: 'IBM Plex Sans Condensed', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 3em;
+            padding: 3em;
+            place-items: center;
+        }
+        
+        h1 { margin: 0; }
+        
+        code {
+            background: rgba(black, .15);
+            padding: .1em .2em;
+            border-radius: .1em;
+        }
+        
+        .box {
+            background: white;
+            padding: 2em;
+            position: relative;
+        }
+        
+        .box--lower {
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
+        }
+        
+        .box--higher {
+            box-shadow: 0 15px 60px 0 rgba(0, 0, 0, .5);
+        } */
+
+
+
+
+  /* an important thing to avoid is having offsets in opposite direction */
+  /* the offset helps indicate the direction of the light source, like a photo */
+        /* * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/halftone-yellow.png');
+            font-family: 'IBM Plex Sans Condensed', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 3em;
+            padding: 3em;
+            place-items: center;
+        }
+        
+        h1 { margin: 0; }
+        
+        code {
+            background: rgba(black, .15);
+            padding: .1em .2em;
+            border-radius: .1em;
+        }
+        
+        .box {
+            background: white;
+            padding: 2em;
+            position: relative;
+        }
+        
+        .box--lower {
+            box-shadow: 0 -5px 15px 0 rgba(0, 0, 0, .5);
+        }
+        
+        .box--higher {
+            box-shadow: 0 15px 15px 0 rgba(0, 0, 0, .5);
+        } */
+
+/* Third Example */
+/* https://codepen.io/kevinpowell/pen/JLagqZ */
+
+        /* with a hover animation, if we want to make the box look like its moving closer or further away, we have to modify the box shadow in the transform */
+        /* quick note - its not the best practice to do a transition with a shadow for performance reasons */
+
+                /* * {
+                    box-sizing: border-box;
+                }
+                
+                body {
+                    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/halftone-yellow.png');
+                    font-family: 'IBM Plex Sans Condensed', sans-serif;
+                    font-size: 2rem;
+                    text-align: center;
+                    min-height: 100vh;
+                    display: grid;
+                    padding: 3em;
+                    place-items: center;
+                }
+                
+                h1 { margin: 0; }
+                
+                code {
+                    background: rgba(black, .15);
+                    padding: .1em .2em;
+                    border-radius: .1em;
+                }
+                
+                .box {
+                    background: white;
+                    padding: 2em;
+                    position: relative;
+                    box-shadow: 0 5px 20px rgba(0,0,0,.25);
+                    transition: transform 300ms, box-shadow 300ms;
+                    position: relative;
+                }
+
+                .box:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 15px 70px rgba(0,0,0,.25);
+
+                } */
+
+/* For overlapping content */
+    /* make sure for overlapping boxes, they seem to be hover more  */
+
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/halftone-yellow.png');
+            font-family: 'IBM Plex Sans Condensed', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            min-height: 100vh;
+            display: grid;
+            padding: 3em;
+            place-items: center;
+        }
+        
+        h1 { margin: 0; }
+        
+        code {
+            background: rgba(black, .15);
+            padding: .1em .2em;
+            border-radius: .1em;
+        }
+        
+        .box {
+            background: white;
+            padding: 2em;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,.25);
+            transition: transform 300ms, box-shadow 300ms;
+            position: relative;
+        }
+        
+        
+        
+        .inner-box {
+            padding: .25em;
+            box-shadow: 0 10px 35px rgba(0,0,0,.25);
+            position: absolute;
+            background: white;
+            bottom: -25px;
+        }
+
+/* for extra tricks with box shadow watch this video */
+/*https://www.youtube.com/watch?v=TZRSXNc0T1k  */
+        
+        
+

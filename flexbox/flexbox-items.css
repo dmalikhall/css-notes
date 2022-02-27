@@ -1,0 +1,63 @@
+/* RESOURCE */
+/* https://www.youtube.com/watch?v=fYq5PXgSsbE */
+
+body{ 
+    padding: 0;
+    margin: 0;
+}
+
+
+/* FOR THE INDIVIDUAL ITEMS IN THE FLEXBOX CONTAINER */
+    /* the item properties either override the position and layout properties of the container or apply different flexible sizing to the elements  */
+
+/* flex-shrink */
+    /* allows us to stop the automatic shrinking of an item */
+        /* flex-shrink: 0; */
+
+/* flex-grow */
+    /* allows us to tell our properties to grow bigger than default */
+    /* it takes us the additional space in the container */
+    /* we can control it by adding a number */
+    /* can be used on multiple items */
+
+/* flex-basis */
+    /* tells items where to start growing */
+    /* flex-basis: 0; means the item will imagine its width is 0px and start growing from there */
+
+/* align-self */
+    /* overrides the cross axis theory */
+    /* does not affect the other items */
+
+
+.flexbox-container {
+    display: flex;
+}
+
+.flexbox-item {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+
+.item-1 {
+    min-height: 100px;
+    flex-shrink: 0;   
+    align-self: flex-start;
+
+}
+
+.item-2 {
+    min-height: 200px;
+    flex-grow: 2;
+    flex-basis: 0;
+    align-self: center;
+}
+
+
+.item-3 {
+    min-height: 300px;
+    flex-grow: 1;
+    flex-basis: 0;
+
+}
