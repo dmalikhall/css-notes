@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+    line-height: 24px;
+    letter-spacing: 1.2px;
+}
+
+#container {
+    padding: 24px;
+    width: 750px;
+    margin: 0 auto;
+
+    
+}
+
+.intro {
+    text-align: center;
+
+    margin-top: 60px;
+
+
+
+
+    animation: appear 1s ease-in;
+}
+
+.intro h1 {
+    padding-bottom: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    color: #000;
+}
+
+.intro .alert {
+    font-family: 'Raleway',sans-serif;
+    letter-spacing: 1.3px;
+    margin-top: 0;
+    margin-bottom: 28px;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.45;
+    text-transform: none;
+    color: #000;
+
+    
+}
+
+.intro .line {
+    width: 80px;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.intro .description {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1.7px;
+    font-weight: 300;
+    padding-bottom: 100px;
+
+    color: #737272;
+}
+
+.what-we-do {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    
+
+    padding: 24px;
+    margin: 0 auto;
+
+
+    text-align: center;
+}
+
+.card {
+    padding-right: 10px
+}
+
+.card .fa{
+    color: #fc6e51;
+    font-size: 42px;;
+}
+
+.card h2 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-transform: none;
+    font-weight: 500;
+    
+
+    color: #1f2021;
+}
+
+.card p {
+    font-family: 'Raleway',sans-serif;
+    color: #737272;
+}
+
+.design {
+    animation: slideright 1s ease-in;
+    animation-delay: .5s;
+
+    opacity: 0;
+    transform: translateX(-5px);
+    animation-fill-mode: forwards;
+
+}
+
+.branding {
+    opacity: 0;
+    
+
+    animation: appear 1s ease-in;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+.support {
+    animation: slideleft 1s ease-in;
+    animation-delay: .5s;
+
+    opacity: 0;
+    transform: translateX(5px);
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(7px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* @keyframes here {
+    from {
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+    }
+} */
+
+@keyframes slideright{
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes slideleft{
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
